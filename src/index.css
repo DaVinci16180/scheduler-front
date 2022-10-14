@@ -126,3 +126,65 @@ right connector from last child*/
   color: #282c34;
   transition: all 0.3s;
 }
+
+.content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  border: 4px solid white;
+  width: 25rem;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+.screen-buttons {
+  width: 15px;
+  height: 15px;
+  min-height: 15px;
+  background-color: green;
+  margin-top: 0.7rem;
+  margin-left: 2rem;
+  border-radius: 15px;
+  position: relative;
+}
+
+.screen-buttons::after, .screen-buttons::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  top: 0;
+}
+
+.screen-buttons::before {
+  background-color: yellow;
+  left: 1.5rem;
+}
+
+.screen-buttons::after {
+  background-color: red;
+  right: 1.5rem;
+}
+
+.screen-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  line-height: 2rem;
+}
+
+.discrete {
+  color: rgb(150, 150, 150);
+  font-size: medium;
+}

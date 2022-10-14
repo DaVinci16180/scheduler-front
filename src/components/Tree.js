@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Node from "./Node";
+import Screen from "./Screen";
 const axios = require('axios').default;
 
 export default function Tree() {
@@ -45,9 +46,14 @@ export default function Tree() {
     
     return (
         <>
-            <div className="tree">
-                { processes !== undefined && <Node nodes={ processes } />}
-            </div>
+            { processes !== undefined && 
+            <>
+                <Screen /> 
+                <div className="tree">
+                    <Node nodes={ processes } />
+                </div>
+            </>
+            }
         </>
     )
 }
