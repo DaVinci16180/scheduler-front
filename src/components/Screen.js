@@ -28,7 +28,7 @@ export default function Screen() {
         <>
         {console.log(process)}
             { 
-                process != undefined 
+                process !== undefined 
                 &&
                 <div className="content">
                     <div className="screen">
@@ -39,7 +39,9 @@ export default function Screen() {
                         </div>
                     </div>
                 </div>
-                ||
+            }
+            { 
+                process === undefined &&
                 <div className="content">
                     <div className="screen">
                         <div className="screen-buttons"></div>
